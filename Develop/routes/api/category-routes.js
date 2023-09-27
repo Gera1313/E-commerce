@@ -29,12 +29,12 @@ router.get('/:id', async (req, res) => {
         { model: Product }
       ]
     });
-    // if (category) {
+    if (category) {
       res.status(200).json(category);
-    // }
-    // else {
-    //   res.status(404).json({ message: "No category found with that id!" });
-    // }
+    }
+    else {
+      res.status(404).json({ message: "No category found with that id!" });
+    }
   }
   catch (err) {
     console.log(`Error in finding category by id: ${err}`);
