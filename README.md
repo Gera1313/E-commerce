@@ -47,7 +47,7 @@ Your walkthrough video should also show the POST, PUT, and DELETE routes for pro
 
 ## Getting Started
 
-NOTE: This is a work in progress and will be worked on when the student has more time possibly when the cource is finished. 
+NOTE: This is a work in progress and will be worked on when the student has more time possibly when the course is finished. 
 
 This Challenge will require a video submission. Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
 
@@ -85,13 +85,27 @@ Create the code needed in `server.js` to sync the Sequelize models to the MySQL 
 
 Would like to thank my classmates who have done this challenge already AND work colleagues who are engineers for the guidance. 
 
+Big thanks to my tutor, Mr Gonzalez.
+
 Also, big help thanks to the Module 13 activities and boilerplate code. 
 
 ## Links
 
 [Repository](https://github.com/Gera1313/13-E-commerce)
 
-[Video](https://youtu.be/y-D9RWO7Yas)
+[Updated Video](https://youtu.be/Vwn2NulQSc8)
 
 ---
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+The tutorial will use the regular expression, or regex, for matching an email. I will explain what the special characters are used for and how they make sure the email you are entering matches the required criteria. 
+
+## Installation
+
+1. Download the copy of the project and open it in an IDE (preferably Visual Studio).
+2. Run `npm install` from the root folder to install all the dependencies.
+3. Open the shell using `mysql -u root -p` and run `source db/schema.sql`, this will create the database. Once done `exit` the shell.
+4. Now create `.env` file in the root and add `DB_USER`, `DB_PW` and `DB_NAME` fields in the file and save it.
+5. Data can be seeded using `npm run seed` command, as this has been setup as part of 'package.json' file.
+7. From the root folder, run `npm start`, this will create the connection.
+8. Now go to Insomnia, and perform actions as shown in the demo video.
