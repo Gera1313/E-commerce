@@ -77,7 +77,7 @@ Also, big help thanks to the Module 13 activities and boilerplate code.
 
 ## Links
 
-[Repository](https://github.com/Gera1313/13-E-commerce)
+[Repository](https://github.com/Gera1313/E-commerce)
 
 [Updated Video](https://youtu.be/Vwn2NulQSc8)
 
