@@ -1,8 +1,8 @@
 # Object-Relational Mapping (ORM): E-Commerce Back End
 
-## The Task
+## My project
 
-The task is to build the back end for an e-commerce site by modifying starter code. You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
+I am to build the back end for an e-commerce site. Front end code was already provided to me. I will configure a working Express.js API to use Sequelize to interact with a MySQL database.
 
 
 ## User Story
@@ -38,6 +38,11 @@ THEN I am able to successfully create, update, and delete data in my database
 5. Data can be seeded using `npm run seed` command, as this has been setup as part of 'package.json' file.
 7. From the root folder, run `npm start`, this will create the connection.
 8. Now go to Insomnia, and perform actions as shown in the demo video.
+
+
+## Notes
+
+Feb 29, 2024: The application has many bugs/errors. Revisiting this project and started working on them now. 
 
 ## Usage
 
