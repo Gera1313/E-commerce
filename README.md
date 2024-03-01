@@ -63,3 +63,7 @@ Also, big help thanks to the Module 13 activities and boilerplate code.
 ## License
 
 ## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## testing testing
+
+Encountering errors committing my work. 
