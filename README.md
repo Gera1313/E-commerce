@@ -29,7 +29,17 @@ WHEN I test API POST, PUT, and DELETE routes in Insomnia
 THEN I am able to successfully create, update, and delete data in my database
 ```
 
-## Mock-Up
+## Installation
+
+1. Download the copy of the project and open it in an IDE (preferably Visual Studio).
+2. Run `npm install` from the root folder to install all the dependencies.
+3. Open the shell using `mysql -u root -p` and run `source db/schema.sql`, this will create the database. Once done `exit` the shell.
+4. Now create `.env` file in the root and add `DB_USER`, `DB_PW` and `DB_NAME` fields in the file and save it.
+5. Data can be seeded using `npm run seed` command, as this has been setup as part of 'package.json' file.
+7. From the root folder, run `npm start`, this will create the connection.
+8. Now go to Insomnia, and perform actions as shown in the demo video.
+
+## Usage
 
 ## Getting Started
 
@@ -81,17 +91,6 @@ Also, big help thanks to the Module 13 activities and boilerplate code.
 
 [Updated Video](https://youtu.be/Vwn2NulQSc8)
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## License
 
-The tutorial will use the regular expression, or regex, for matching an email. I will explain what the special characters are used for and how they make sure the email you are entering matches the required criteria. 
-
-## Installation
-
-1. Download the copy of the project and open it in an IDE (preferably Visual Studio).
-2. Run `npm install` from the root folder to install all the dependencies.
-3. Open the shell using `mysql -u root -p` and run `source db/schema.sql`, this will create the database. Once done `exit` the shell.
-4. Now create `.env` file in the root and add `DB_USER`, `DB_PW` and `DB_NAME` fields in the file and save it.
-5. Data can be seeded using `npm run seed` command, as this has been setup as part of 'package.json' file.
-7. From the root folder, run `npm start`, this will create the connection.
-8. Now go to Insomnia, and perform actions as shown in the demo video.
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
