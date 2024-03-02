@@ -46,14 +46,6 @@ Feb 29, 2024: The application has many bugs/errors. Revisiting this project and 
 
 ## Usage
 
-## Credits
-
-Would like to thank my classmates who have done this challenge already AND work colleagues who are engineers for the guidance. 
-
-Big thanks to my tutor, Mr Gonzalez.
-
-Also, big help thanks to the Module 13 activities and boilerplate code. 
-
 ## Links
 
 [Repository](https://github.com/Gera1313/E-commerce)
@@ -63,7 +55,3 @@ Also, big help thanks to the Module 13 activities and boilerplate code.
 ## License
 
 ## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## testing testing
-
-Encountering errors committing my work. 
