@@ -48,6 +48,16 @@ I will use the schema.sql file in the db folder to create my database using MySQ
 
 My database will contain the following four models, including the requirements listed for each model: Category, Products, Tag, Product Tag. 
 
+Fill Out the API Routes to Perform RESTful CRUD Operations:
+
+Fill out the unfinished routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
+
+Seeding the Database:
+After creating the models and routes, I will run npm run seed to seed data to my database so that I can test the routes.
+
+Sync Sequelize to the Database on Server Start:
+I have created the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
+
 ## Usage
 
 ## Links
