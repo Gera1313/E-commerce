@@ -42,7 +42,11 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Notes
 
-Feb 29, 2024: The application has many bugs/errors. Revisiting this project and started working on them now. 
+I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
+
+I will use the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
+
+My database will contain the following four models, including the requirements listed for each model: Category, Products, Tag, Product Tag. 
 
 ## Usage
 
