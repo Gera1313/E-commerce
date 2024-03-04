@@ -62,6 +62,8 @@ I have created the code needed in server.js to sync the Sequelize models to the 
 
 ## Usage
 
+The following images show examples of the application's API routes being tested in Insomnia Core.
+
 ## Links
 
 [Repository](https://github.com/Gera1313/E-commerce)
