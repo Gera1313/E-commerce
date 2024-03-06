@@ -36,3 +36,5 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
+
+// Worked on this file. Llines 7-28.

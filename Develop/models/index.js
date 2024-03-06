@@ -37,3 +37,5 @@ module.exports = {
   Tag,
   ProductTag,
 };
+
+// Worked on this file. 7-32

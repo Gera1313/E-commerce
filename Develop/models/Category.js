@@ -29,3 +29,5 @@ Category.init(
 );
 
 module.exports = Category;
+
+// Worked on this file. Defined the columns. 9-21

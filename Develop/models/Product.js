@@ -53,3 +53,5 @@ Product.init(
 );
 
 module.exports = Product;
+
+// Worked on this file. Lines 12-45
