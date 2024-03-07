@@ -42,13 +42,15 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Notes
 
-March 6, 2024: I have fixed most bugs. I keep getting an error in http://localhost:3001/api/products/6.
+March 6, 2024: I have fixed most bugs. I keep getting an error in:
+
+GET http://localhost:3001/api/products/6 : "message": "No product found with the id!"
 
 POST http://localhost:3001/api/categories/ : "Must contain category name"
 
-PUT: http://localhost:3001/api/categories/6 : Error: Couldn't connect to server
+PUT: http://localhost:3001/api/categories/6 : "Must contain category name"
 
-DELETE: http://localhost:3001/api/categories/6 : Error: Couldn't connect to server
+DELETE: http://localhost:3001/api/categories/6 : "message": "No category with that id!"
 
 I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
