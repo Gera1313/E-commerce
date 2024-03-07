@@ -44,6 +44,12 @@ THEN I am able to successfully create, update, and delete data in my database
 
 March 6, 2024: I have fixed most bugs. I keep getting an error in http://localhost:3001/api/products/6.
 
+POST http://localhost:3001/api/categories/ : "Must contain category name"
+
+PUT: http://localhost:3001/api/categories/6 : Error: Couldn't connect to server
+
+DELETE: http://localhost:3001/api/categories/6 : Error: Couldn't connect to server
+
 I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
 I will use the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
