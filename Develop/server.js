@@ -9,13 +9,6 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// function logGets (req, res, next){
-//   if(req.method === "GET"){
-//     console.log(`=================GETTTTIINNGGNG+++++++++++++++++++`)
-//   }
-//   next()
-// }
-
 // app.use(logGets)
 app.use(routes);
 
