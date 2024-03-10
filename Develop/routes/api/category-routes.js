@@ -10,7 +10,11 @@ router.get('/', async (req, res) => {
         // be sure to include its associated Products
         include: [Product]
     });
-  }
+
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  };
 });
 
 router.get('/:id', (req, res) => {
