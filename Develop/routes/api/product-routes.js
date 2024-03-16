@@ -103,8 +103,13 @@ router.put('/:id', (req, res) => {
             ProductTag.destroy({ where: { id: productTagsToRemove } }),
             ProductTag.bulkCreate(newProductTags),
           ]);
-        });
-      }
+        })
+        .then((updatedProductTags) => res.json(updatedProductTags))
+    .catch((err) => {
+      // console.log(err);
+      res.status(400).json(err);
+    });
+});
 
 router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
