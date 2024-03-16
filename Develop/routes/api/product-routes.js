@@ -115,25 +115,20 @@ router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   try {
     // Deletes all references to this product from product_tag table
-    await ProductTag.destroy({
-      where: {
-        product_id: req.params.id
-      }
-    });
-    const deletedProduct = await Product.destroy({
+    const productData = await Product.destroy({
       where: {
         id: req.params.id
       }
     });
-    if (deletedProduct) {
-      res.status(200).json(deletedProduct);
-    }
-    else {
+
+    if (!productData) {
       res.status(404).json({message: 'No product found with the provided id!'});
     }
+
+    res.status(200).json(productData);
   }
   catch (err) {
-    console.log(`Error in deleting product by id: ${err}`);
+    console.log(`Error in deleting product by id: ${err}`); // Maybe delete this?? 
     res.status(500).json(err);
   }
 });
