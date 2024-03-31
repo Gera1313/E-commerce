@@ -54,6 +54,8 @@ DELETE: http://localhost:3001/api/categories/6 : "message": "No category with th
 
 March 12, 2024: I tried different code and it still didn't work. Reverting back to my old code for category-routes.js file and will start again. 
 
+March 30, 2024: Got back from vacation. Will look over where I left off to pick it up tomorrow.
+
 I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
 I will use the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
