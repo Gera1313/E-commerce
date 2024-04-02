@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     res.status(200).json(tagData);
   }
   catch (err) {
-    console.log(`Error in getting tags: ${err}`); // Maybe this is not required? 
+    console.log(`Error in getting tags: ${err}`); // Maybe this is not required?
     res.status(500).json(err);
   }
 });
@@ -25,21 +25,19 @@ router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
-    const tag = await Tag.findByPk(req.params.id, {
+    const tagData = await Tag.findByPk(req.params.id, {
       include: [
-        {model: Product, through: ProductTag}
+        Product
       ]
     });
 
-    if (tag) {
-      res.status(200).json(tag);
+    if (!tagData) {
+      res.status(404).json({ message: 'No tag found with this id!' });
+      return;
     }
-    else {
-      res.status(404).json({message: 'No tag found with the id provided!'});
-    }
-  }
-  catch (err) {
-    console.log(`Error in getting tag by id: ${err}`);
+    
+    res.status(200).json(tagData);
+  } catch (err) {
     res.status(500).json(err);
   }
 });
