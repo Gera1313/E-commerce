@@ -35,33 +35,18 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No tag found with this id!' });
       return;
     }
-    
+
     res.status(200).json(tagData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
   // create a new tag
-  try {
-    const tagName = req.body.tag_name;
-
-    if (tagName) {
-      const tagCreated = await Tag.create(
-        {tag_name: tagName}
-      );
-
-      res.status(200).json(tagCreated);
-    }
-    else {
-      res.status(404).json({message: 'Request body must contain tag_name'});
-    }
-  }
-  catch (err) {
-    console.log(`Error creating a tag: ${err}`);
-    res.status(500).json(err);
-  }
+  Tag.create(req.body)
+  .then((tag) => res.status(200).json(tag))
+  .catch((err) => res.status(404).json(err))
 });
 
 router.put('/:id', async (req, res) => {
