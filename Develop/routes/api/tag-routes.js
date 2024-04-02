@@ -63,29 +63,15 @@ Tag.update(req.body, {
 router.delete('/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
-    await ProductTag.destroy({
-      where: {
-        tag_id: req.params.id
-      }
+    const tagData = await Tag.destroy({
+      where: { id: req.params.id }
     });
-
-    const deletedTag = await Tag.destroy(
-      {
-        where: {
-          id: req.params.id
-        }
-      }
-    );
-
-    if (!deletedTag) {
-      res.status(404).json({message: 'No tag found with the id provided!'});
+    if (!tagData) {
+      res.status(404).json({ message: 'There is no tag with this ID!' });
+      return;
     }
-    else {
-      res.status(200).json(deletedTag);
-    }
-  }
-  catch (err) {
-    console.log(`Error deleting tag: ${err}`);
+    res.status(200).json(tagData);
+  } catch (err) {
     res.status(500).json(err);
   }
 });
