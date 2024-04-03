@@ -42,16 +42,6 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Notes
 
-March 6, 2024: I have fixed most bugs, BUT I keep getting an error in:
-
-GET: http://localhost:3001/api/products/6 : "message": "No product found with the id!"
-
-POST: http://localhost:3001/api/categories/ : "Must contain category name"
-
-PUT: http://localhost:3001/api/categories/6 : "Must contain category name"
-
-DELETE: http://localhost:3001/api/categories/6 : "message": "No category with that id!"
-
 March 12, 2024: I tried different code and it still didn't work. Reverting back to my old code for category-routes.js file and will start again. 
 
 March 30, 2024: Got back from vacation. Will look over where I left off to pick it up tomorrow.
