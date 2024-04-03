@@ -56,7 +56,7 @@ March 12, 2024: I tried different code and it still didn't work. Reverting back 
 
 March 30, 2024: Got back from vacation. Will look over where I left off to pick it up tomorrow.
 
-April 2, 2024: Reworked the routes
+April 2, 2024: Reworked the routes. Get errors in tags route only now. 
 
 I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
