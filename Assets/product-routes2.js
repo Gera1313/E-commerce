@@ -8,18 +8,13 @@ router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   try {
-    const products = await Product.findAll({
-      include: [
-        {model: Category},
-        {model: Tag,
-        through: ProductTag}
-      ]
+    const productData = await Product.findAll({
+      include: [Category, Tag]
     });
-
-    res.status(200).json(products);
+    res.status(200).json(productData);
   }
   catch (err) {
-    console.log(`Error in getting products: ${err}`);
+    console.log(`Error in getting products: ${err}`); //maybe take out this line? 
     res.status(500).json(err);
   }
 });
@@ -29,25 +24,17 @@ router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   try {
-    const product = await Product.findByPk(req.params.id, {
-      include: [
-        { model: Category},
-        {
-          model: Tag,
-          through: ProductTag
-        }
-      ]
+    const productData = await Product.findByPk(req.params.id, {
+      include: [Category, Tag]
     });
 
-    if (product) {
-      res.status(200).json(product);
+    if (!productData) {
+      res.status(404).json({message: 'No product found with the id!'});
+      return;
     }
-    else {
-      res.status(404).json({message: 'No product found with the id!'})
-    }
-  }
-  catch (err) {
-    console.log(`Error finding product by id: ${err}`);
+
+    res.status(200).json(productData);
+  } catch (err) {
     res.status(500).json(err);
   }
 });
@@ -93,13 +80,9 @@ router.put('/:id', (req, res) => {
     },
   })
     .then((product) => {
-      // return ProductTag.findAll({ where: { product_id: req.params.id } });
-      if (req.body.tagIds && req.body.tagIds.length) {
-        
-        ProductTag.findAll({
-          where: { product_id: req.params.id }
-          // maybe take 97-100 out?
-        }).then((productTags) => {
+      return ProductTag.findAll({ where: { product_id: req.params.id } });
+    })
+    .then((productTags) => {
           // create filtered list of new tag_ids
           const productTagIds = productTags.map(({ tag_id }) => tag_id);
           const newProductTags = req.body.tagIds
@@ -110,21 +93,18 @@ router.put('/:id', (req, res) => {
               tag_id,
             };
           });
-
             // figure out which ones to remove
           const productTagsToRemove = productTags
           .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
           .map(({ id }) => id);
+
                   // run both actions
           return Promise.all([
             ProductTag.destroy({ where: { id: productTagsToRemove } }),
             ProductTag.bulkCreate(newProductTags),
           ]);
-        });
-      }
-
-      return res.json(product);
-    })
+        })
+        .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
       // console.log(err);
       res.status(400).json(err);
@@ -135,25 +115,21 @@ router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   try {
     // Deletes all references to this product from product_tag table
-    await ProductTag.destroy({
-      where: {
-        product_id: req.params.id
-      }
-    });
-    const deletedProduct = await Product.destroy({
+    const productData = await Product.destroy({
       where: {
         id: req.params.id
       }
     });
-    if (deletedProduct) {
-      res.status(200).json(deletedProduct);
-    }
-    else {
+
+    if (!productData) {
       res.status(404).json({message: 'No product found with the provided id!'});
+      return;
     }
+
+    res.status(200).json(productData);
   }
   catch (err) {
-    console.log(`Error in deleting product by id: ${err}`);
+    console.log(`Error in deleting product by id: ${err}`); // Maybe delete this?? 
     res.status(500).json(err);
   }
 });
