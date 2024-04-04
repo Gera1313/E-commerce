@@ -81,7 +81,7 @@ The following images show examples of the application's API routes being tested 
 
 [Repository](https://github.com/Gera1313/E-commerce)
 
-[Updated Video](https://youtu.be/Vwn2NulQSc8)
+[Updated Video](https://youtu.be/czGgpwumRw8)
 
 ## License
 
