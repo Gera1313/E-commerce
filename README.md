@@ -42,12 +42,6 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Notes
 
-March 12, 2024: I tried different code and it still didn't work. Reverting back to my old code for category-routes.js file and will start again. 
-
-March 30, 2024: Got back from vacation. Will look over where I left off to pick it up tomorrow.
-
-April 2, 2024: Reworked the routes. Get errors in tags route only now. Fixed the tags route. Will troubleshoot my previous code tomorrow. 
-
 I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
 I will use the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
@@ -65,6 +59,12 @@ After creating the models and routes, I will run npm run seed to seed data to my
 Sync Sequelize to the Database on Server Start:
 
 I have created the code needed in server.js to sync the Sequelize models to the MySQL database on server start.
+
+March 12, 2024: Revisiting my work and fix all of the issues. I tried different code and it still didn't work. Reverting back to my old code for category-routes.js file and will start again. 
+
+April 2, 2024: Reworked the routes. Get errors in tags route only now. Fixed the tags route. Will troubleshoot my previous code tomorrow. 
+
+April 3, 2024: My original code finally works 100%. 
 
 ## Usage
 
