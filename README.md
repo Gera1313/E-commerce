@@ -1,8 +1,8 @@
-# Object-Relational Mapping (ORM): E-Commerce Back End
+# E-Commerce Back End
 
 ## My project
 
-I am to build the back end for an e-commerce site. Front end code was already provided to me. I will configure a working Express.js API to use Sequelize to interact with a MySQL database.
+I am to build the back end for an e-commerce site following the Object-Relational Mapping (ORM) paradigm. Front end code was already provided to me. I will configure a working Express.js API to use Sequelize to interact with a MySQL database.
 
 
 ## User Story
@@ -42,15 +42,15 @@ THEN I am able to successfully create, update, and delete data in my database
 
 ## Notes
 
-I will use the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
+I used the MySQL2 and Sequelize packages to connect the Express.js API to a MySQL database and the dotenv package to use environment variables to store sensitive data, like my MySQL username, password, and database name.
 
-I will use the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
+I used the schema.sql file in the db folder to create my database using MySQL shell commands. Use environment variables to store sensitive data, like my MySQL username, password, and database name. 
 
-My database will contain the following four models, including the requirements listed for each model: Category, Products, Tag, Product Tag. 
+My database contains the following four models, including the requirements listed for each model: Category, Products, Tag, Product Tag. 
 
 API Routes to Perform RESTful CRUD Operations:
 
-I have filled out the routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using your Sequelize models.
+I created the routes in product-routes.js, tag-routes.js, and category-routes.js to perform create, read, update, and delete operations using the Sequelize models.
 
 Seeding the Database:
 
@@ -68,7 +68,14 @@ April 3, 2024: My original code finally works 100%.
 
 ## Usage
 
-The following images show examples of the application's API routes being tested in Insomnia Core.
+The following images show examples of the application's API routes being tested in Insomnia.
+
+![Demo](/Assets/13-orm-homework-demo-01.gif)
+
+![Demo](/Assets/13-orm-homework-demo-02.gif)
+
+![Demo](/Assets/13-orm-homework-demo-03.gif)
+
 
 ## Links
 
